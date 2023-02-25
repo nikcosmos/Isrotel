@@ -1,0 +1,1175 @@
+//wrapper========================================================================================================================================================
+.sm-wrapper {
+   a {
+      position: relative;
+      display: inline-block;
+      &:focus::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: -5px;
+         width: calc(100% + 10px);
+         height: 100%;
+         border-radius: 4px;
+         border: solid 3px #e8f0fe;
+      }
+   }
+}
+//Container========================================================================================================================================================
+.sm-container {
+   max-width: rem(1600px);
+   width: 100%;
+   margin: auto;
+   padding: 0px 15px;
+   font-family: 'SimplerPro';
+   color: #363d50;
+   @media (max-width: 1200px) {
+      max-width: 775px;
+      padding: 0px 24px;
+   }
+}
+//Section========================================================================================================================================================
+.sm-orders-summary-section {
+   margin: rem(40px) 0px rem(100px) 0px;
+   @media (max-width: 1200px) {
+      margin: rem(24px) 0px rem(88px) 0px;
+   }
+}
+//Title row========================================================================================================================================================
+.sm-top-line {
+   margin-bottom: rem(40px);
+   @media (max-width: 1200px) {
+      margin-bottom: rem(24px);
+   }
+}
+.sm-user-name {
+   font-weight: 700;
+   font-size: rem(24px);
+   line-height: 133%;
+   margin: 0px 0px rem(8px) 0px;
+}
+.sm-user-status {
+   font-weight: 400;
+   font-size: rem(20px);
+   line-height: 140%;
+   margin: 0px 0px 0px 0px;
+}
+//Card========================================================================================================================================================
+.sm-card {
+   display: flex;
+   gap: 32px;
+   background: #ffffff;
+   box-shadow: 0px -1px 20px rgba(94, 112, 139, 0.25);
+   border-radius: 6px;
+   padding: 24px;
+
+   &._reason {
+      .sm-start-action {
+         display: none;
+      }
+      .sm-cancellation-reason-action {
+         display: block;
+      }
+   }
+   &._fee {
+      .sm-start-action {
+         display: none;
+      }
+      .sm-cancellation-reason-action {
+         display: none;
+      }
+      .sm-cancellation-fee-action {
+         display: block;
+      }
+   }
+   &._disabled {
+      color: #8c95ac;
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-disabled-action {
+         display: block;
+      }
+   }
+
+   &._load {
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-loader-action {
+         display: block;
+      }
+   }
+   &._cancellation-success {
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background: rgba(52, 83, 69, 0.2);
+         backdrop-filter: blur(3px);
+         border-radius: 6px;
+      }
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-cancellation-success-action {
+         display: block;
+      }
+   }
+
+   &._cancellation {
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-cancellation-action {
+         display: block;
+      }
+   }
+   &._wl-cancellation {
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-wl-cancellation-action {
+         display: block;
+      }
+   }
+   &._failed-cancellation {
+      .sm-failure-process {
+         display: none;
+      }
+      .sm-cancellation-failed-action {
+         display: block;
+      }
+   }
+
+   &:not(:last-child) {
+      margin-bottom: rem(40px);
+   }
+   @media (max-width: 1200px) {
+      display: block;
+      padding: 0;
+      &:not(:last-child) {
+         margin-bottom: rem(24px);
+      }
+   }
+}
+//Common========================================================================================================================================================
+.sm-order-number {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   padding: 8px 24px;
+   background: #002d74;
+   border-radius: 6px 6px 0px 0px;
+   color: #ffffff;
+   ._disabled & {
+      background: #e1e2e6;
+      color: #363d50;
+   }
+}
+.sm-meta-list {
+   display: flex;
+   list-style: none;
+   padding: 0px 0px 0px 0px;
+   margin: 0px 0px 0px 0px;
+   gap: rem(8px) rem(16px);
+   flex-wrap: wrap;
+   li {
+      font-weight: 400;
+      font-size: rem(14px);
+      line-height: 157%;
+      position: relative;
+      &:not(:last-child) {
+         &::after {
+            content: '';
+            height: rem(16px);
+            width: 1px;
+            border-left: 1px dashed #c4c6cd;
+            position: absolute;
+            top: 50%;
+            transform: translate(0px, -50%);
+            left: rem(-8px);
+            .sm-wrapper[dir='ltr'] & {
+               left: unset;
+               right: rem(-8px);
+            }
+         }
+      }
+   }
+}
+.sm-currency {
+   display: block;
+   font-size: rem(14px);
+   line-height: 157%;
+   color: #000;
+   ._canceled &,
+   ._disabled & {
+      color: #8c95ac;
+   }
+   @media (max-width: 1200px) {
+      color: #363d50;
+   }
+}
+.sm-blue-btn {
+   display: block;
+   border: none;
+   padding: rem(8px);
+   font-weight: 700;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #ffffff;
+   background: #002d74;
+   border-radius: 4px;
+   max-width: rem(185px);
+   width: 100%;
+   transition: all 0.3s ease 0s;
+   word-break: break-word;
+   &:hover {
+      box-shadow: 0 4px 6px 0 rgb(1 62 158 / 20%);
+      transition: all 0.3s ease 0s;
+   }
+}
+//ImageBlock========================================================================================================================================================
+
+.order-number-mob {
+   @media (min-width: 1200px) {
+      display: none;
+   }
+}
+.sm-card-img-block {
+   border-radius: 6px;
+   overflow: hidden;
+   width: 478px;
+   height: 357px;
+   ._disabled & {
+      opacity: 0.4;
+   }
+   // width: rem(478px);
+   // height: rem(357px);
+   @media (max-width: 1600px) {
+      width: 303px;
+      height: 226px;
+      // width: rem(303px);
+      // height: rem(226px);
+   }
+   @media (max-width: 1280px) {
+      width: 266px;
+      height: 199px;
+      // width: rem(266px);
+      // height: rem(199px);
+   }
+   @media (max-width: 1200px) {
+      width: 100%;
+      height: 540px;
+      // width: rem(202px);
+      // height: rem(150px);
+      border-radius: 0;
+   }
+   @media (max-width: 775px) {
+      height: calc(100vw - 178px);
+   }
+}
+.sm-card-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+//ContentBlock========================================================================================================================================================
+.sm-left {
+   flex: auto;
+}
+.order-number-pc {
+   margin-bottom: rem(16px);
+   @media (max-width: 1200px) {
+      display: none;
+   }
+}
+.sm-card-content {
+   display: flex;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   overflow: hidden;
+   @media (max-width: 1200px) {
+      display: block;
+      border: none;
+      padding: 16px;
+   }
+}
+//StaticBlock========================================================================================================================================================
+.sm-static-content {
+   flex: auto;
+   padding: rem(16px) rem(24px) rem(24px) rem(24px);
+   @media (max-width: 1200px) {
+      padding: 0;
+      margin-bottom: rem(16px);
+   }
+}
+//StaticCommonInfo========================================================================================================================================================
+.sm-static-common-info {
+   padding-bottom: rem(11px);
+   border-bottom: 1px dashed #e1e2e6;
+   margin-bottom: 19px;
+   @media (max-width: 1200px) {
+      border: none;
+      margin-bottom: rem(16px);
+      padding-bottom: 0;
+   }
+}
+.sm-hotel-name {
+   display: block;
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   margin-bottom: rem(8px);
+}
+//StaticInner========================================================================================================================================================
+.sm-static-inner {
+   @media (max-width: 1200px) {
+      border: 1px solid rgba(213, 225, 245, 0.8);
+      border-radius: 8px;
+      padding: 16px;
+   }
+}
+//StaticRoomList========================================================================================================================================================
+.sm-static-inner-rooms-list {
+}
+.sm-static-room-item {
+   padding-bottom: rem(27px);
+   display: grid;
+   grid-template-columns: 1fr auto;
+   gap: rem(15px);
+   align-items: end;
+   border-bottom: 1px dashed #e1e2e6;
+   margin-bottom: 19px;
+   @media (max-width: 1200px) {
+      padding-bottom: rem(8px);
+      margin-bottom: rem(8px);
+      gap: rem(8px);
+      grid-template-columns: 1fr;
+      & > div:last-child {
+         justify-self: end;
+      }
+   }
+   &._canceled {
+      color: #8c95ac;
+   }
+}
+
+.sm-static-room-item-first-col {
+}
+.sm-static-room-item-second-col {
+   display: flex;
+   gap: 16px;
+   align-items: center;
+}
+.sm-static-room-meta-list {
+   gap: rem(8px) rem(32px);
+
+   & li {
+      font-size: rem(18px);
+      line-height: 144%;
+      @media (max-width: 1200px) {
+         font-size: rem(16px);
+         color: #000000;
+         ._disabled & {
+            color: #8c95ac;
+         }
+      }
+      &:not(:last-child)::after {
+         left: rem(-16px);
+         .sm-wrapper[dir='ltr'] & {
+            left: unset;
+            right: rem(-16px);
+         }
+      }
+      &:first-child {
+         font-weight: 600;
+      }
+   }
+}
+.sm-info-about-guests {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   color: #000000;
+   max-width: rem(320px);
+   margin-bottom: 0;
+   color: inherit;
+}
+.sm-static-room-canceled {
+   display: none;
+   padding: 8px;
+   font-size: rem(14px);
+   line-height: 157%;
+   background: #f6faff;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 4px;
+   max-width: rem(90px);
+   word-break: break-word;
+   text-align: center;
+   color: #000000;
+   ._canceled & {
+      display: block;
+   }
+   ._disabled & {
+      color: #8c95ac;
+   }
+}
+.sm-static-room-price-label {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   display: block;
+   color: #000000;
+   ._canceled &,
+   ._disabled & {
+      color: #8c95ac;
+   }
+   @media (max-width: 1200px) {
+      color: #51556c;
+      font-size: rem(13px);
+   }
+}
+.sm-static-room-price {
+   font-weight: 400;
+   font-size: rem(24px);
+   line-height: 133%;
+   color: #000000;
+   display: flex;
+   align-items: center;
+   gap: 2px;
+   word-break: break-all;
+   max-width: rem(140px);
+   ._canceled &,
+   ._disabled & {
+      color: #8c95ac;
+   }
+   @media (max-width: 1200px) {
+      font-size: rem(20px);
+      color: #363d50;
+      max-width: none;
+   }
+}
+
+//StaticTotalInfo========================================================================================================================================================
+.sm-static-total-info {
+   display: flex;
+   justify-content: space-between;
+   gap: 15px;
+   & > div:last-child {
+      justify-self: flex-end;
+   }
+   @media (max-width: rem(390px)) {
+      flex-direction: column;
+   }
+}
+.sm-total-info-label {
+   display: block;
+   font-weight: 400;
+   font-size: rem(24px);
+   line-height: 133%;
+   color: #000000;
+   max-width: 180px;
+   ._disabled & {
+      color: #8c95ac;
+   }
+}
+
+.sm-total-info-price {
+   display: flex;
+   align-items: center;
+   gap: 2px;
+   font-size: rem(32px);
+   line-height: 125%;
+   color: #000000;
+   max-width: rem(140px);
+   word-break: break-all;
+   ._disabled & {
+      color: #8c95ac;
+   }
+   @media (max-width: 1200px) {
+      font-size: rem(24px);
+   }
+   @media (max-width: rem(390px)) {
+      justify-content: end;
+      margin: 0 auto 0 0;
+      max-width: none;
+      .sm-wrapper[dir='ltr'] & {
+         margin: 0 0 0 auto;
+      }
+   }
+}
+.sm-total-info-price-type {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   color: #000000;
+   display: block;
+   text-align: end;
+   ._disabled & {
+      color: #8c95ac;
+   }
+   @media (max-width: 1200px) {
+      font-size: rem(13px);
+   }
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//========================================================================================================================================================
+//DynamicBlock========================================================================================================================================================
+.sm-dynamic-content {
+   flex: 0 0 375px;
+   border-right: 1px solid rgba(213, 225, 245, 0.8);
+   overflow: hidden;
+   .sm-wrapper[dir='ltr'] & {
+      border-right: none;
+      border-left: 1px solid rgba(213, 225, 245, 0.8);
+   }
+   @media (max-width: 1200px) {
+      border: 1px solid rgba(213, 225, 245, 0.8);
+      border-radius: 8px;
+   }
+}
+.sm-failure-process {
+   height: 100%;
+}
+//StartActions========================================================================================================================================================
+.sm-start-action {
+   height: 100%;
+   padding: 24px;
+   background: #f6faff;
+}
+.sm-start-action-text {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   color: #002d74;
+   margin-bottom: 16px;
+}
+.sm-start-action-tooltip-block {
+   display: flex;
+   gap: 5px;
+   align-items: center;
+   margin-bottom: 32px;
+   position: relative;
+}
+.sm-start-action-tooltip-text {
+   margin: 0px 0px 0px 0px;
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+}
+.sm-start-action-tooltip-button {
+   flex: none;
+   border: none;
+   background: transparent;
+   padding: 0px 0px 0px 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   & img {
+      width: rem(20px);
+      height: rem(20px);
+      pointer-events: none;
+   }
+}
+//Tooltip========================================================================================================================================================
+.sm-start-action-tooltip-content {
+   background: #ffffff;
+   border: 1px solid #dde9fc;
+   border-radius: 8px;
+   padding: 32px 24px 24px;
+   position: absolute;
+   top: 100%;
+   left: -50px;
+   z-index: 1000;
+   width: 490px;
+   display: none;
+}
+.sm-start-action-tooltip-content-title {
+   font-weight: 400;
+   font-size: rem(18px);
+   line-height: 144%;
+   margin-bottom: 8px;
+   display: block;
+}
+.sm-start-action-tooltip-content-text {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   margin-bottom: 0;
+}
+//Tippy CONFIG========================================================================================================================================================
+.tippy-box {
+   background: #ffffff;
+   border: 1px solid #dde9fc;
+   border-radius: 8px;
+   color: #000000;
+   padding: 32px 24px;
+   box-shadow: 0 -1px 20px rgba(94, 112, 139, 0.25);
+   max-width: rem(490px) !important;
+   @media (max-width: 1200px) {
+      max-width: rem(315px) !important;
+   }
+}
+.tippy-content {
+   padding: 0;
+   font-family: 'SimplerPro';
+}
+.tippy-arrow {
+   color: #fff;
+   &::before {
+      color: #fff;
+   }
+}
+.tippy-box > .tippy-arrow:before {
+   transform: scale(2);
+}
+//Buttons========================================================================================================================================================
+.sm-start-action-buttons-block {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   @media (max-width: 1200px) {
+      flex-direction: column-reverse;
+   }
+}
+.sm-start-action-button-cancel {
+   background: #ffffff;
+   border: 1px solid #002d74;
+   border-radius: 4px;
+   padding: 8px 13px;
+   font-weight: 700;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #002d74;
+   max-width: rem(135px);
+   width: 100%;
+   transition: all 0.3s ease 0s;
+   @media (max-width: 1200px) {
+      max-width: rem(300px);
+   }
+   &:hover {
+      box-shadow: 0 3px 4px 0 rgb(0 75 193 / 14%);
+      transition: all 0.3s ease 0s;
+   }
+}
+.sm-start-action-button-approve {
+   @media (max-width: 1200px) {
+      max-width: rem(300px);
+   }
+}
+//CancellationReasonActions========================================================================================================================================================
+.sm-cancellation-reason-action {
+   display: none;
+   padding: 24px 24px 24px 16px;
+   background: #f6faff;
+   height: 100%;
+}
+.sm-cancellation-reason-top-line {
+   margin-bottom: rem(16px);
+}
+.sm-cancellation-reason-question {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   color: #002d74;
+   margin: 0;
+}
+.sm-cancellation-reason-question-help {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   margin-bottom: 0;
+}
+.sm-cancellation-reason-form {
+}
+.sm-cancellation-reason-list {
+   width: 100%;
+   height: rem(150px);
+   padding-left: 8px;
+   margin-bottom: rem(16px);
+   .sm-wrapper[dir='ltr'] & {
+      padding-left: 0;
+      padding-right: 8px;
+   }
+}
+.sm-radio {
+   position: relative;
+   width: 100%;
+   cursor: pointer;
+   &:not(:last-child) {
+      margin-bottom: 6px;
+   }
+   &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      clip: rect(0 0 0 0);
+      visibility: hidden;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      gap: rem(12px);
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      .sm-radio__input:checked + & {
+         border: 1px solid rgba(213, 225, 245, 0.8);
+      }
+   }
+
+   &__style {
+      flex: none;
+      border: 1px solid #002d74;
+      border-radius: 50%;
+      width: rem(16px);
+      height: rem(16px);
+      display: block;
+      position: relative;
+      &::after {
+         content: '';
+         width: rem(10px);
+         height: rem(10px);
+         position: absolute;
+         background: #002d74;
+         border-radius: 50%;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0);
+         transition: all 0.3s ease 0s;
+      }
+      .sm-radio__input:checked + .sm-radio__item & {
+         &::after {
+            transform: translate(-50%, -50%) scale(1);
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+
+   &__text {
+      font-weight: 400;
+      font-size: rem(14px);
+      line-height: 157%;
+      color: #000000;
+   }
+}
+.sm-cancellation-reason-button-block {
+   display: flex;
+   gap: 8px;
+   padding-left: 8px;
+   justify-content: center;
+   .sm-wrapper[dir='ltr'] & {
+      padding-left: 0;
+      padding-right: 8px;
+   }
+   @media (max-width: 400px) {
+      flex-direction: column;
+   }
+}
+.sm-cancellation-reason-back-btn {
+   font-weight: 700;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-decoration-line: underline;
+   border: none;
+   color: #002d74;
+   background-color: transparent;
+   padding: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   max-width: rem(93px);
+   width: 100%;
+   word-break: break-word;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   &:active {
+      border: 1px solid rgba(0, 45, 116, 0.3);
+   }
+   @media (max-width: 1200px) {
+      max-width: rem(226px);
+   }
+   @media (max-width: 600px) {
+      flex: 0 0 calc(50% - 4px);
+   }
+   @media (max-width: 400px) {
+      flex: auto;
+      max-width: none;
+   }
+   & img {
+      pointer-events: none;
+      width: rem(16px);
+      height: rem(12px);
+      .sm-wrapper[dir='ltr'] & {
+         transform: rotate(-180deg);
+      }
+      @media (min-width: 1200px) {
+         display: none;
+      }
+   }
+   & span {
+      pointer-events: none;
+   }
+}
+.sm-cancellation-reason-next-btn {
+   max-width: rem(226px);
+   @media (max-width: 600px) {
+      flex: 0 0 calc(50% - 4px);
+   }
+   @media (max-width: 400px) {
+      flex: auto;
+      max-width: none;
+   }
+}
+
+//SimpleBarConfig========================================================================================================================================================
+.simplebar-track.simplebar-vertical {
+   width: 4px;
+}
+.simplebar-scrollbar {
+   &::before {
+      background: #8c95ac;
+      opacity: 1;
+      left: 0px;
+      right: 0px;
+   }
+}
+
+//CancellationFeeActions========================================================================================================================================================
+.sm-cancellation-fee-action {
+   display: none;
+   padding: 24px 24px;
+   background: #f6faff;
+   height: 100%;
+}
+.sm-cancellation-fee-top-line {
+   margin-bottom: rem(16px);
+}
+.sm-cancellation-fee-back-btn {
+   padding: rem(8px) rem(0px) rem(8px) rem(8px);
+   display: flex;
+   gap: rem(8px);
+   background-color: transparent;
+   align-items: center;
+   border: none;
+   & img {
+      width: rem(16px);
+      height: rem(12px);
+      pointer-events: none;
+      .sm-wrapper[dir='ltr'] & {
+         transform: rotate(-180deg);
+      }
+   }
+   & span {
+      pointer-events: none;
+      font-weight: 700;
+      font-size: rem(16px);
+      line-height: 150%;
+      text-decoration-line: underline;
+      color: #002d74;
+   }
+}
+.sm-cancellation-fee-title {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   color: #002d74;
+   margin: 0px 0px 0px 0px;
+}
+.sm-cancellation-fee-rule {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   margin: 0px 0px 0px 0px;
+}
+.sm-cancellation-fee-form {
+}
+
+.sm-cancellation-fee-confirm-box {
+   background: #ffffff;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   box-shadow: 0px 5px 12px rgba(178, 194, 209, 0.25);
+   border-radius: 6px;
+   padding: 16px 12px;
+   margin-bottom: 16px;
+}
+.sm-cancellation-fee-sum {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 26px;
+   flex-wrap: wrap;
+   & span {
+      font-weight: 600;
+   }
+}
+.sm-cancellation-fee-confirm-input-block {
+}
+.sm-cancellation-fee-confirm-label {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   margin-bottom: 8px;
+}
+.sm-cancellation-fee-confirm-input {
+   background: #eeeff3;
+   border-radius: 6px;
+   padding: rem(8px);
+   border: none;
+   width: 100%;
+   font-weight: 400;
+   font-size: rem(13px);
+   line-height: 154%;
+}
+.sm-cancellation-fee-confirm-input-error {
+   display: block;
+   font-weight: 400;
+   font-size: rem(12px);
+   line-height: 167%;
+   color: #d8123e;
+}
+.sm-cancellation-fee-pay-block {
+   background: #ffffff;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   box-shadow: 0px 5px 12px rgba(178, 194, 209, 0.25);
+   border-radius: 6px;
+   height: 440px;
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+//DisabledAction========================================================================================================================================================
+.sm-disabled-action {
+   display: none;
+}
+.sm-disabled-action-top-line {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   text-align: center;
+   color: #002d74;
+   padding: rem(12px);
+   background: #f6faff;
+   border-bottom: 1px solid rgba(213, 225, 245, 0.8);
+   margin-bottom: rem(32px);
+}
+.sm-disabled-action-main-line {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: rem(24px);
+   padding: 0px rem(24px);
+   @media (max-width: 1200px) {
+      margin-bottom: 90px;
+   }
+}
+.sm-disabled-action-text {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #002d74;
+   max-width: rem(200px);
+   margin-bottom: 0;
+}
+.sm-disabled-action-email {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   text-align: center;
+   margin-bottom: 0;
+   word-break: break-word;
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//LoaderAction========================================================================================================================================================
+.sm-loader-action {
+   display: none;
+   padding: 24px;
+}
+.sm-loader-top-line {
+}
+.sm-loader-top-line-title {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #002d74;
+   margin-bottom: 16px;
+}
+.sm-loader-top-line-text {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   text-align: center;
+   margin: 0px 0px 0px 0px;
+}
+.sm-loader-spinner {
+   display: flex;
+   justify-content: center;
+   margin-top: rem(46px);
+   @media (max-width: 1200px) {
+      margin-bottom: 108px;
+   }
+   & img {
+      width: rem(38px);
+      height: rem(43px);
+      animation: spinner 2s infinite linear;
+   }
+}
+
+@keyframes spinner {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(-360deg);
+   }
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//cancellationSuccess========================================================================================================================================================
+.sm-cancellation-success-action {
+   display: none;
+   height: 100%;
+   background: #ffffff;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   position: relative;
+   z-index: 20;
+   overflow: hidden;
+}
+.sm-cancellation-success-action-top-line {
+   background: #f6faff;
+   border-bottom: 1px solid rgba(213, 225, 245, 0.8);
+   text-align: center;
+   padding: 12px 24px;
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   color: #002d74;
+   margin-bottom: 0;
+}
+.sm-cancellation-success-action-main-line {
+   padding: rem(16px) 24px;
+   @media (max-width: 1200px) {
+      padding: rem(32px) 24px;
+   }
+}
+.sm-cancellation-success-action-wish {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #002d74;
+   max-width: rem(250px);
+   margin: 0px auto rem(24px) auto;
+}
+.sm-cancellation-success-action-email-info {
+   font-weight: 400;
+   font-size: rem(14px);
+   line-height: 157%;
+   text-align: center;
+   margin-bottom: rem(16px);
+}
+.sm-cancellation-success-action-btn {
+   margin: auto;
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+//Cancellation-========================================================================================================================================================
+.sm-cancellation-action {
+   background: #f6faff;
+   height: 100%;
+   display: none;
+   padding: rem(24px) rem(24px) rem(120px) rem(24px);
+}
+.sm-cancellation-info {
+   margin-bottom: rem(48px);
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   color: #002d74;
+}
+.sm-cancellation-btn {
+   margin: auto;
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//wlCancellation-========================================================================================================================================================
+.sm-wl-cancellation-action {
+   height: 100%;
+   padding: 24px;
+   background: #f6faff;
+   display: none;
+   @media (max-width: 1200px) {
+      padding-bottom: rem(105px);
+   }
+}
+.sm-wl-cancellation-buttons-block {
+   justify-content: center;
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+//FailedCancellation-========================================================================================================================================================
+.sm-cancellation-failed-action {
+   display: none;
+   background: #f6faff;
+   height: 100%;
+   padding: 24px;
+}
+.sm-cancellation-failed-top-line {
+   margin-bottom: rem(32px);
+}
+.sm-cancellation-failed-title {
+   font-weight: 600;
+   font-size: rem(18px);
+   line-height: 144%;
+   color: #002d74;
+   margin-bottom: rem(16px);
+}
+.sm-cancellation-failed-sub-title {
+   font-weight: 700;
+   font-size: rem(14px);
+   line-height: 157%;
+   margin-bottom: 0;
+}
+.sm-cancellation-failed-btn {
+   margin: auto;
+}
+.sm-cancellation-failed-contact-block {
+   background: #ffffff;
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 8px;
+   padding: rem(8px);
+   margin-top: rem(32px);
+   display: flex;
+   align-items: flex-start;
+   gap: 15px;
+   & img {
+      width: rem(15px);
+      height: rem(15px);
+   }
+}
+.sm-cancellation-failed-contact-text {
+   font-weight: 600;
+   font-size: rem(14px);
+   line-height: 157%;
+   color: #000000;
+   margin-bottom: 0;
+}

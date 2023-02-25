@@ -1,0 +1,19 @@
+@import '../../node_modules/sass-rem/rem';
+// @import './sm-orders.scss';
+// @import './sm-orders-cancel-popup.scss';
+// @import './sm-see-order-popup.scss';
+// @import './sm-datepicker.scss';
+@import './sm-event-page.scss';
+
+body {
+   background-color: #ffffff;
+}
+.site-header {
+   background: #002d74;
+   height: 90px;
+}
+
+.site-footer {
+   background: #4f6580;
+   height: 400px;
+}

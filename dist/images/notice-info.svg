@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+        <rect width="23" height="23" stroke="#FFE58F" stroke-width="2" rx="11.5"/>
+        <text fill="#FFE58F" font-family="Rubik-Medium, Rubik" font-size="16" font-weight="400" transform="matrix(-1 0 0 1 23 0)">
+            <tspan x="9.348" y="17">!</tspan>
+        </text>
+    </g>
+</svg>

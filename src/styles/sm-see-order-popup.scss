@@ -1,0 +1,365 @@
+.sm-see-order-popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   font-family: 'SimplerPro';
+}
+.sm-see-order-body {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(54, 61, 80, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   padding: calc((100vh - 500px) / 2) 20px calc((100vh - 500px) / 2) 20px;
+   overflow-y: auto;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease 0s;
+   overflow-x: hidden;
+   @media (max-width: 1200px) {
+      padding: 110px 20px 60px 20px;
+   }
+   @media (max-height: 520px) {
+      padding: 20px 50px 60px 20px;
+   }
+   ._open-popup & {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease 0s;
+   }
+}
+.sm-see-order-content {
+   background: #ffffff;
+   border-radius: 0px 0px 6px 6px;
+   max-width: rem(625px);
+   width: 100%;
+   transition: all 0.3s ease 0s;
+   transform: scale(0);
+   ._open-popup & {
+      transform: scale(1);
+      transition: all 0.3s ease 0s;
+   }
+}
+.sm-see-order-top-line {
+   padding: rem(12px) rem(50px);
+   background: #f6faff;
+   border-bottom: 1px solid rgba(213, 225, 245, 0.8);
+   position: relative;
+   @media (max-width: 1200px) {
+      padding: 16px rem(40px);
+   }
+}
+.sm-see-order-top-line-title {
+   margin: 0px 0px 0px 0px;
+   text-align: center;
+   font-weight: 400;
+   font-size: rem(24px);
+   line-height: 133%;
+   color: #000000;
+   word-break: break-word;
+   @media (max-width: 1200px) {
+      font-weight: 200;
+   }
+}
+.sm-see-order-close-btn {
+   position: absolute;
+   right: 24px;
+   top: 50%;
+   transform: translate(0px, -50%);
+   border: none;
+   background-color: transparent;
+   padding: rem(5px);
+   @media (max-width: 1200px) {
+      right: 16px;
+   }
+   & img {
+      width: rem(16px);
+      height: rem(16px);
+      pointer-events: none;
+   }
+}
+.sm-see-order-dynamic-block {
+   padding: 45px 62px;
+   position: relative;
+   @media (max-width: 1200px) {
+      padding: 40px 32px 54px 32px;
+   }
+}
+.sm-see-order-block-prompt {
+   font-weight: 600;
+   font-size: rem(16px);
+   line-height: 150%;
+   color: #000000;
+   margin-bottom: rem(24px);
+}
+.sm-see-blue-btn {
+   display: block;
+   border: none;
+   padding: rem(8px);
+   font-weight: 700;
+   font-size: rem(18px);
+   line-height: 144%;
+   text-align: center;
+   color: #ffffff;
+   background: #002d74;
+   border-radius: 4px;
+   max-width: rem(185px);
+   width: 100%;
+   transition: all 0.3s ease 0s;
+   word-break: break-word;
+   &:hover {
+      box-shadow: 0 4px 6px 0 rgb(1 62 158 / 20%);
+      transition: all 0.3s ease 0s;
+   }
+}
+//FirstStep========================================================================================================================================================
+
+.sm-see-order-first-step {
+}
+.sm-see-order-first-step-content {
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   padding: rem(40px) 16px;
+}
+.sm-see-order-data-send {
+   align-self: center;
+   max-width: rem(236px);
+   width: 100%;
+   margin: auto;
+   @media (max-width: rem(425px)) {
+      max-width: none;
+   }
+}
+
+.sm-data-send-input-row {
+   position: relative;
+   &:not(:last-child) {
+      margin-bottom: rem(24px);
+   }
+}
+.sm-data-send-input {
+   border: none;
+   border-bottom: rem(1px) solid #ced0d5;
+   width: 100%;
+   padding: rem(1px) 0 rem(1px) rem(24px);
+   font-weight: 600;
+   font-size: rem(16px);
+   [dir='ltr'] & {
+      padding: rem(1px) rem(24px) rem(1px) 0;
+   }
+   &.sm-data-send-input-without-icon {
+      padding: rem(1px) 0px;
+      [dir='ltr'] & {
+         padding: rem(1px) 0px;
+      }
+   }
+   &:focus {
+      border-bottom: rem(2px) solid #004bc1;
+      outline: none;
+      padding-bottom: 0;
+   }
+
+   &:focus ~ .sm-data-send-label {
+      color: #0055cc;
+      text-shadow: 0 0 0.031rem #004bc1;
+      bottom: 100%;
+      right: rem(-10px);
+      transition: all 0.7s ease 0s;
+      font-size: rem(14px);
+      [dir='ltr'] & {
+         right: unset;
+         left: rem(-10px);
+      }
+      sup {
+         transform: scale(0);
+         transition: all 0.3s ease 0s;
+      }
+   }
+   &:not(:focus):valid ~ .sm-data-send-label {
+      color: #0055cc;
+      text-shadow: 0 0 0.031rem #004bc1;
+      bottom: 100%;
+      right: rem(-10px);
+      transition: all 0.7s ease 0s;
+      font-size: rem(14px);
+      [dir='ltr'] & {
+         right: unset;
+         left: rem(-10px);
+      }
+      sup {
+         transform: scale(0);
+         transition: all 0.3s ease 0s;
+      }
+   }
+}
+
+.sm-data-send-label {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   transition: all 0.3s ease 0s;
+   cursor: pointer;
+   [dir='ltr'] & {
+      right: unset;
+      left: 0;
+   }
+   & sup {
+      display: inline-block;
+      font-size: rem(14px);
+      line-height: 157%;
+      color: #d40f44;
+      margin-left: rem(4px);
+      position: relative;
+      top: rem(-2px);
+      transform: scale(1);
+      transition: all 0.3s ease 0s;
+   }
+}
+.sm-data-send-icon {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translate(0px, -50%);
+   pointer-events: none;
+   width: rem(18px);
+   height: rem(16px);
+   [dir='ltr'] & {
+      left: unset;
+      right: 0;
+   }
+}
+
+.sm-data-send-error-text {
+   display: block;
+   font-weight: 400;
+   font-size: rem(13px);
+   line-height: 154%;
+   color: #d8123e;
+}
+.sm-data-send-captcha-block {
+   height: rem(50px);
+   background-color: #eee;
+   margin-top: rem(11px);
+   @media (max-width: 475px) {
+      max-width: rem(236px);
+      margin: rem(11px) auto 0 auto;
+   }
+}
+.sm-data-send-submit-btn {
+   max-width: none;
+   margin-top: rem(8px);
+   @media (max-width: 475px) {
+      max-width: rem(236px);
+      margin: rem(8px) auto 0 auto;
+   }
+}
+//SecondStep========================================================================================================================================================
+.sm-see-order-second-step {
+   display: none;
+}
+.sm-see-order-second-step-content {
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   padding: 24px 40px;
+   @media (max-width: 475px) {
+      padding: 24px 10px;
+   }
+}
+.sm-see-order-enter-code {
+}
+.sm-enter-code-top-line {
+   margin-bottom: rem(18px);
+}
+.sm-enter-code-text-bold {
+   font-weight: 600;
+   font-size: rem(16px);
+   line-height: 150%;
+   text-align: center;
+   color: #000000;
+   margin-bottom: rem(8px);
+}
+.sm-enter-code-text {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   color: #000000;
+   text-align: center;
+   margin-bottom: 0;
+}
+.sm-enter-code-input-list {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   margin-bottom: rem(16px);
+   flex-wrap: wrap;
+   [dir='rtl'] & {
+      flex-direction: row-reverse;
+   }
+   @media (max-width: 991.98px) {
+      gap: 8px;
+   }
+}
+.sm-enter-code-input {
+   width: rem(56px);
+   height: rem(56px);
+   border: 1px solid rgba(225, 226, 230, 0.56);
+   border-radius: 6px;
+   text-align: center;
+   font-size: rem(24px);
+   padding: 0;
+   @media (max-width: 991.98px) {
+      width: rem(40px);
+      height: rem(40px);
+   }
+   @media (max-width: 420.98px) {
+      width: rem(30px);
+      height: rem(30px);
+      font-size: rem(18px);
+   }
+   @media (max-width: 350.98px) {
+      width: rem(25px);
+      height: rem(25px);
+      font-size: rem(18px);
+   }
+   &:focus {
+      outline: none;
+      border: rem(1px) solid #004bc1;
+   }
+}
+.sm-enter-code-resend {
+   margin-bottom: rem(24px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: rem(5px) rem(12px);
+}
+.sm-enter-code-resend-text {
+   font-weight: 400;
+   font-size: rem(16px);
+   line-height: 150%;
+   color: #000000;
+   text-align: center;
+}
+.sm-enter-code-resend-button {
+   background-color: transparent;
+   border: none;
+   text-decoration: underline;
+   font-weight: 700;
+   font-size: rem(16px);
+   line-height: 150%;
+   color: #000000;
+}
+.sm-enter-code-submit-btn {
+   margin: auto;
+   padding: rem(8px) rem(24px);
+}

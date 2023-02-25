@@ -1,0 +1,494 @@
+.sm-see-order-popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   font-family: 'SimplerPro';
+}
+
+.sm-see-order-body {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(54, 61, 80, 0.7);
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: start;
+   -ms-flex-align: start;
+   align-items: start;
+   padding: calc((100vh - 500px) / 2) 20px calc((100vh - 500px) / 2) 20px;
+   overflow-y: auto;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+   overflow-x: hidden;
+}
+
+._open-popup .sm-see-order-body {
+   opacity: 1;
+   visibility: visible;
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-see-order-content {
+   background: #ffffff;
+   border-radius: 0px 0px 6px 6px;
+   max-width: 39.0625rem;
+   width: 100%;
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+}
+
+._open-popup .sm-see-order-content {
+   -webkit-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-see-order-top-line {
+   padding: 0.75rem 3.125rem;
+   background: #f6faff;
+   border-bottom: 1px solid rgba(213, 225, 245, 0.8);
+   position: relative;
+}
+
+.sm-see-order-top-line-title {
+   margin: 0px 0px 0px 0px;
+   text-align: center;
+   font-weight: 400;
+   font-size: 1.5rem;
+   line-height: 133%;
+   color: #000000;
+   word-break: break-word;
+}
+
+.sm-see-order-close-btn {
+   position: absolute;
+   right: 24px;
+   top: 50%;
+   -webkit-transform: translate(0px, -50%);
+   -ms-transform: translate(0px, -50%);
+   transform: translate(0px, -50%);
+   border: none;
+   background-color: transparent;
+   padding: 0.3125rem;
+}
+
+.sm-see-order-close-btn img {
+   width: 1rem;
+   height: 1rem;
+   pointer-events: none;
+}
+
+.sm-see-order-dynamic-block {
+   padding: 45px 62px;
+   position: relative;
+}
+
+.sm-see-order-block-prompt {
+   font-weight: 600;
+   font-size: 1rem;
+   line-height: 150%;
+   color: #000000;
+   margin-bottom: 1.5rem;
+}
+
+.sm-see-blue-btn {
+   display: block;
+   border: none;
+   padding: 0.5rem;
+   font-weight: 700;
+   font-size: 1.125rem;
+   line-height: 144%;
+   text-align: center;
+   color: #ffffff;
+   background: #002d74;
+   border-radius: 4px;
+   max-width: 11.5625rem;
+   width: 100%;
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+   word-break: break-word;
+}
+
+.sm-see-blue-btn:hover {
+   -webkit-box-shadow: 0 4px 6px 0 rgba(1, 62, 158, 0.2);
+   box-shadow: 0 4px 6px 0 rgba(1, 62, 158, 0.2);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-see-order-first-step-content {
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   padding: 2.5rem 16px;
+}
+
+.sm-see-order-data-send {
+   -ms-flex-item-align: center;
+   -ms-grid-row-align: center;
+   align-self: center;
+   max-width: 14.75rem;
+   width: 100%;
+   margin: auto;
+}
+
+.sm-data-send-input-row {
+   position: relative;
+}
+
+.sm-data-send-input-row:not(:last-child) {
+   margin-bottom: 1.5rem;
+}
+
+.sm-data-send-input {
+   border: none;
+   border-bottom: 0.0625rem solid #ced0d5;
+   width: 100%;
+   padding: 0.0625rem 0 0.0625rem 1.5rem;
+   font-weight: 600;
+   font-size: 1rem;
+}
+
+[dir='ltr'] .sm-data-send-input {
+   padding: 0.0625rem 1.5rem 0.0625rem 0;
+}
+
+.sm-data-send-input.sm-data-send-input-without-icon {
+   padding: 0.0625rem 0px;
+}
+
+[dir='ltr'] .sm-data-send-input.sm-data-send-input-without-icon {
+   padding: 0.0625rem 0px;
+}
+
+.sm-data-send-input:focus {
+   border-bottom: 0.125rem solid #004bc1;
+   outline: none;
+   padding-bottom: 0;
+}
+
+.sm-data-send-input:focus ~ .sm-data-send-label {
+   color: #0055cc;
+   text-shadow: 0 0 0.031rem #004bc1;
+   bottom: 100%;
+   right: -0.625rem;
+   -webkit-transition: all 0.7s ease 0s;
+   -o-transition: all 0.7s ease 0s;
+   transition: all 0.7s ease 0s;
+   font-size: 0.875rem;
+}
+
+[dir='ltr'] .sm-data-send-input:focus ~ .sm-data-send-label {
+   right: unset;
+   left: -0.625rem;
+}
+
+.sm-data-send-input:focus ~ .sm-data-send-label sup {
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-data-send-input:not(:focus):valid ~ .sm-data-send-label {
+   color: #0055cc;
+   text-shadow: 0 0 0.031rem #004bc1;
+   bottom: 100%;
+   right: -0.625rem;
+   -webkit-transition: all 0.7s ease 0s;
+   -o-transition: all 0.7s ease 0s;
+   transition: all 0.7s ease 0s;
+   font-size: 0.875rem;
+}
+
+[dir='ltr'] .sm-data-send-input:not(:focus):valid ~ .sm-data-send-label {
+   right: unset;
+   left: -0.625rem;
+}
+
+.sm-data-send-input:not(:focus):valid ~ .sm-data-send-label sup {
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-data-send-label {
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 150%;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+   cursor: pointer;
+}
+
+[dir='ltr'] .sm-data-send-label {
+   right: unset;
+   left: 0;
+}
+
+.sm-data-send-label sup {
+   display: inline-block;
+   font-size: 0.875rem;
+   line-height: 157%;
+   color: #d40f44;
+   margin-left: 0.25rem;
+   position: relative;
+   top: -0.125rem;
+   -webkit-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+
+.sm-data-send-icon {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   -webkit-transform: translate(0px, -50%);
+   -ms-transform: translate(0px, -50%);
+   transform: translate(0px, -50%);
+   pointer-events: none;
+   width: 1.125rem;
+   height: 1rem;
+}
+
+[dir='ltr'] .sm-data-send-icon {
+   left: unset;
+   right: 0;
+}
+
+.sm-data-send-error-text {
+   display: block;
+   font-weight: 400;
+   font-size: 0.8125rem;
+   line-height: 154%;
+   color: #d8123e;
+}
+
+.sm-data-send-captcha-block {
+   height: 3.125rem;
+   background-color: #eee;
+   margin-top: 0.6875rem;
+}
+
+.sm-data-send-submit-btn {
+   max-width: none;
+   margin-top: 0.5rem;
+}
+
+.sm-see-order-second-step {
+   display: none;
+}
+
+.sm-see-order-second-step-content {
+   border: 1px solid rgba(213, 225, 245, 0.8);
+   border-radius: 6px;
+   padding: 24px 40px;
+}
+
+.sm-enter-code-top-line {
+   margin-bottom: 1.125rem;
+}
+
+.sm-enter-code-text-bold {
+   font-weight: 600;
+   font-size: 1rem;
+   line-height: 150%;
+   text-align: center;
+   color: #000000;
+   margin-bottom: 0.5rem;
+}
+
+.sm-enter-code-text {
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 150%;
+   color: #000000;
+   text-align: center;
+   margin-bottom: 0;
+}
+
+.sm-enter-code-input-list {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   gap: 16px;
+   margin-bottom: 1rem;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+}
+
+[dir='rtl'] .sm-enter-code-input-list {
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: reverse;
+   -ms-flex-direction: row-reverse;
+   flex-direction: row-reverse;
+}
+
+.sm-enter-code-input {
+   width: 3.5rem;
+   height: 3.5rem;
+   border: 1px solid rgba(225, 226, 230, 0.56);
+   border-radius: 6px;
+   text-align: center;
+   font-size: 1.5rem;
+   padding: 0;
+}
+
+.sm-enter-code-input:focus {
+   outline: none;
+   border: 0.0625rem solid #004bc1;
+}
+
+.sm-enter-code-resend {
+   margin-bottom: 1.5rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   gap: 0.3125rem 0.75rem;
+}
+
+.sm-enter-code-resend-text {
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 150%;
+   color: #000000;
+   text-align: center;
+}
+
+.sm-enter-code-resend-button {
+   background-color: transparent;
+   border: none;
+   text-decoration: underline;
+   font-weight: 700;
+   font-size: 1rem;
+   line-height: 150%;
+   color: #000000;
+}
+
+.sm-enter-code-submit-btn {
+   margin: auto;
+   padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 1200px) {
+   .sm-see-order-body {
+      padding: 110px 20px 60px 20px;
+   }
+
+   .sm-see-order-top-line {
+      padding: 16px 2.5rem;
+   }
+
+   .sm-see-order-top-line-title {
+      font-weight: 200;
+   }
+
+   .sm-see-order-close-btn {
+      right: 16px;
+   }
+
+   .sm-see-order-dynamic-block {
+      padding: 40px 32px 54px 32px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .sm-enter-code-input-list {
+      gap: 8px;
+   }
+
+   .sm-enter-code-input {
+      width: 2.5rem;
+      height: 2.5rem;
+   }
+}
+
+@media (max-width: 475px) {
+   .sm-data-send-captcha-block {
+      max-width: 14.75rem;
+      margin: 0.6875rem auto 0 auto;
+   }
+
+   .sm-data-send-submit-btn {
+      max-width: 14.75rem;
+      margin: 0.5rem auto 0 auto;
+   }
+
+   .sm-see-order-second-step-content {
+      padding: 24px 10px;
+   }
+}
+
+@media (max-width: 420.98px) {
+   .sm-enter-code-input {
+      width: 1.875rem;
+      height: 1.875rem;
+      font-size: 1.125rem;
+   }
+}
+
+@media (max-width: 350.98px) {
+   .sm-enter-code-input {
+      width: 1.5625rem;
+      height: 1.5625rem;
+      font-size: 1.125rem;
+   }
+}
+
+@media (max-width: 26.5625rem) {
+   .sm-see-order-data-send {
+      max-width: none;
+   }
+}
+
+@media (max-height: 520px) {
+   .sm-see-order-body {
+      padding: 20px 50px 60px 20px;
+   }
+}

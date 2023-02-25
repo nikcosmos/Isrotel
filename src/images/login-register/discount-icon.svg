@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="65px" viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8DFF1BA8-90DB-4C0B-B535-D2B81879097A</title>
+    <g id="HEB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Isrotel_HP_1-Open/RTL-Copy" transform="translate(-843.000000, -429.000000)">
+            <g id="Shemesh-Login/Reg" transform="translate(0.000000, 172.000000)">
+                <g id="Group-18-Copy" transform="translate(315.000000, 184.000000)">
+                    <g id="Icons/Mini-Illustrations/discount" transform="translate(528.000000, 73.000000)">
+                        <g id="Group-74" transform="translate(0.999800, 4.000100)">
+                            <g id="Icons/_General/Collapse/Down-Copy-14" transform="translate(7.000200, 5.999900)" stroke="#AB6503" stroke-width="1.2">
+                                <g id="Group" transform="translate(0.407615, 0.407615)">
+                                    <g transform="translate(0.698709, 0.698709)">
+                                        <path d="M1.33155931,1.33155928 C1.88528788,0.794254256 2.63128528,0.501178791 3.40276751,0.517885508 L21.8951214,5.88550135e-05 C23.1138623,-0.00611077026 24.2848899,0.473003903 25.1498165,1.33155928 L48.4501655,24.6319082 C50.1863898,26.3037126 50.2386337,29.0665506 48.5668293,30.802775 C48.5287437,30.842418 48.4898085,30.8812116 48.4501655,30.9194388 L30.9194389,48.4501654 C29.2476345,50.1863898 26.4847965,50.2386337 24.7485721,48.5668293 C24.7089291,48.5287437 24.6701355,48.4898085 24.6319083,48.4501654 L1.33155931,25.1496749 C0.472862355,24.2847483 -0.00611073609,23.1137207 5.88717676e-05,21.8949798 L0.517885542,3.4026259 C0.501178825,2.63128525 0.79425429,1.88528785 1.33155931,1.33155928" id="Fill-1"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="Group-3-Copy" transform="translate(11.000200, 49.999900)" stroke="#B87100">
+                                <line x1="4" y1="0" x2="4" y2="3.42857143" id="Stroke-14"></line>
+                                <line x1="4" y1="4.57142857" x2="4" y2="8" id="Stroke-15"></line>
+                                <line x1="4.57142857" y1="4" x2="8" y2="4" id="Stroke-16"></line>
+                                <line x1="0" y1="4" x2="3.42857143" y2="4" id="Stroke-17"></line>
+                            </g>
+                            <g id="Group-4-Copy" transform="translate(0.000200, 48.999900)" stroke="#B87100">
+                                <line x1="3" y1="0" x2="3" y2="2.4" id="Stroke-14"></line>
+                                <line x1="3" y1="3.6" x2="3" y2="6" id="Stroke-15"></line>
+                                <line x1="3.6" y1="3" x2="6" y2="3" id="Stroke-16"></line>
+                                <line x1="0" y1="3" x2="2.4" y2="3" id="Stroke-17"></line>
+                            </g>
+                            <g id="Group-5-Copy" transform="translate(50.000200, 9.999900)" stroke="#B87100">
+                                <line x1="0" y1="4" x2="3.42857143" y2="4" id="Stroke-14"></line>
+                                <line x1="4.57142857" y1="4" x2="8" y2="4" id="Stroke-15"></line>
+                                <line x1="4" y1="3.42857143" x2="4" y2="0" id="Stroke-16"></line>
+                                <line x1="4" y1="8" x2="4" y2="4.57142857" id="Stroke-17"></line>
+                            </g>
+                            <g id="Group-2" transform="translate(49.000200, -0.000100)" stroke="#B87100">
+                                <line x1="0" y1="3" x2="2.4" y2="3" id="Stroke-14"></line>
+                                <line x1="3.6" y1="3" x2="6" y2="3" id="Stroke-15"></line>
+                                <line x1="3" y1="2.4" x2="3" y2="0" id="Stroke-16"></line>
+                                <line x1="3" y1="6" x2="3" y2="3.6" id="Stroke-17"></line>
+                            </g>
+                        </g>
+                        <text id="10%" transform="translate(32.038185, 33.646904) rotate(44.000000) translate(-32.038185, -33.646904) " font-family="SimplerPro-Regular, SimplerPro" font-size="18" font-weight="normal" fill="#AB6503">
+                            <tspan x="16.6141848" y="40.6469042">10%</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <filter id="a">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+        <filter id="b" width="454.5%" height="454.5%" x="-177.3%" y="-177.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.154911495 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g filter="url(#a)" transform="translate(1 1)">
+            <g filter="url(#b)">
+                <path fill="#FFF" d="M11 0c6.075 0 11 4.925 11 11s-4.925 11-11 11S0 17.075 0 11 4.925 0 11 0z"/>
+            </g>
+        </g>
+        <path fill="#004BC1"
+              d="M15.066 8.115a.587.587 0 01.763.884L12.828 12l3 3a.584.584 0 01-.762.885l-.065-.056L12 12.828l-3 3-.066.057a.587.587 0 01-.763-.884L11.172 12l-3-3a.584.584 0 01.762-.885l.065.056L12 11.172l3-3z"/>
+    </g>
+</svg>
